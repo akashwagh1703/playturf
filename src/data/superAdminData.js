@@ -1,0 +1,108 @@
+export const dashboardMockData = {
+  kpiData: [
+    {
+      title: "Today's Bookings",
+      value: 24,
+      icon: "CalendarToday",
+      color: "#e3f2fd",
+    },
+    {
+      title: "Active Turfs",
+      value: 12,
+      icon: "Workspaces",
+      color: "#f3e5f5",
+    },
+    {
+      title: "Total Owners",
+      value: 15,
+      icon: "People",
+      color: "#f0f4c3",
+    },
+    {
+      title: "Total Revenue (₹)",
+      value: "4.5M",
+      icon: "MonetizationOn",
+      color: "#e8f5e9",
+    },
+  ],
+  bookingTrends: [
+    { day: "Mon", bookings: 12 },
+    { day: "Tue", bookings: 19 },
+    { day: "Wed", bookings: 7 },
+    { day: "Thu", bookings: 14 },
+    { day: "Fri", bookings: 22 },
+    { day: "Sat", bookings: 30 },
+    { day: "Sun", bookings: 25 },
+  ],
+  revenueData: [
+    { month: "Jan", revenue: 1200000 },
+    { month: "Feb", revenue: 1800000 },
+    { month: "Mar", revenue: 2400000 },
+    { month: "Apr", revenue: 1600000 },
+    { month: "May", revenue: 2000000 },
+    { month: "Jun", revenue: 2500000 },
+  ],
+  turfPerformanceData: [
+    { name: "PlayTurf Arena", bookings: 120 },
+    { name: "Sports Galaxy", bookings: 95 },
+    { name: "Turf City", bookings: 80 },
+    { name: "GoTurf", bookings: 65 },
+    { name: "The Pitch", bookings: 50 },
+  ],
+  userRoleData: [
+    { name: "Players", value: 850 },
+    { name: "Owners", value: 150 },
+  ],
+  monthlyUserRegistrations: [
+    { month: "Jan", players: 120, owners: 15 },
+    { month: "Feb", players: 150, owners: 20 },
+    { month: "Mar", players: 180, owners: 25 },
+    { month: "Apr", players: 160, owners: 18 },
+    { month: "May", players: 200, owners: 22 },
+    { month: "Jun", players: 220, owners: 30 },
+  ],
+  recentBookings: [
+    {
+      id: 1,
+      turf: "PlayTurf Arena",
+      player: "Arjun Singh",
+      amount: "₹1,500",
+      status: "Confirmed",
+    },
+    {
+      id: 2,
+      turf: "Sports Galaxy",
+      player: "Priya Patel",
+      amount: "₹2,000",
+      status: "Pending",
+    },
+    {
+      id: 3,
+      turf: "The Pitch",
+      player: "Vikram Reddy",
+      amount: "₹1,200",
+      status: "Cancelled",
+    },
+    {
+      id: 4,
+      turf: "PlayTurf Arena",
+      player: "Neha Gupta",
+      amount: "₹1,500",
+      status: "Confirmed",
+    },
+  ],
+  pendingApprovals: [
+    {
+      id: 101,
+      owner: "Rajesh Kumar",
+      turfName: "Green Valley Sports",
+      date: "2023-10-25",
+    },
+    {
+      id: 102,
+      owner: "Sneha Sharma",
+      turfName: "City Sports Hub",
+      date: "2023-10-24",
+    },
+  ],
+};

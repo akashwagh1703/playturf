@@ -21,6 +21,7 @@ import AdminSettings from "./pages/superadmin/AdminSettings";
 import { getAuth } from "./utils/auth";
 import OwnerProfile from "./pages/owner/OwnerProfile";
 import SuperAdminProfile from "./pages/superadmin/SuperAdminProfile";
+import SuperAdminDashboard from "./pages/superadmin/SuperAdminDashboard";
 
 function App() {
   const auth = getAuth();
@@ -38,7 +39,20 @@ function App() {
         }
       >
         {/* Owner only */}
-        <Route index element={<OwnerDashboard />} />
+        {/* <Route index element={<OwnerDashboard />} /> */}
+        <Route
+          index
+          element={
+            <ProtectedRoute roles={["owner", "superadmin"]}>
+              {auth?.role === "owner" ? (
+                <OwnerDashboard />
+              ) : (
+                <SuperAdminDashboard />
+              )}
+            </ProtectedRoute>
+          }
+        />
+
         <Route
           path="calendar"
           element={
@@ -106,7 +120,7 @@ function App() {
           }
         />
 
-        <Route 
+        <Route
           path="profile"
           element={
             <ProtectedRoute roles={["owner", "superadmin"]}>
